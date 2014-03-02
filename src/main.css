@@ -58,8 +58,9 @@ a:hover {
   text-decoration: underline;
 
   position: relative;
+  padding-left: 1px;
+  padding-top: 1px;
   top: 1px;
-  left: 1px;
 }
 
 /*
@@ -164,4 +165,8 @@ nav.toc {
 
 nav.toc ul {
   margin-top: 0;  /* otherwise the columns have a different top margin */
+}
+
+nav.toc ul li p:first-of-type {
+  padding-top: 2px;   /* prevents the hyperlink hover-effect from pushing down the column a pixel when hovering over the top title in the right column of a table of contents */
 }
