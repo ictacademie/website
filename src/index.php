@@ -14,53 +14,46 @@
 
       <div>
         <h2>Opleidingen</h2>
-        <ul>
-          <li>
-            <p>Applicatieontwikkelaar</p>
-            <p>niveau 4, bol</p>
-            <p>Iets over de opleiding Applicatieontwikkelaar.</p>
-          </li>
-        </ul>
 
-        <ul>
-          <li>
-            <p>ICT-beheerder</p>
-            <p>niveau 4, bol</p>
-            <p>Iets over de opleiding ICT-beheerder.</p>
-          </li>
-        </ul>
+        <nav class="toc">
+          <ul>
+            <li>
+              <p><a href=".">Applicatieontwikkelaar</a> <span>niveau 4, bol</span></p>              
+              <img src="." width="128" height="72">
+              <p>Iets over de opleiding Applicatieontwikkelaar.</p>
+            </li>
 
-        <ul>
-          <li>
-            <p>Netwerkbeheerder</p>
-            <p>niveau 4, bol en bbl</p>
-            <p>Iets over de opleiding Netwerkbeheerder.</p>
-          </li>
-        </ul>
+            <li>
+              <p>ICT-beheerder <span>niveau 4, bol</span></p>
+              <img src="." width="128" height="72">
+              <p>Iets over de opleiding ICT-beheerder.</p>
+            </li>
 
-        <ul>
-          <li>
-            <p>Medewerker beheer ICT</p>
-            <p>niveau 3, bol en bbl</p>
-            <p>Iets over de opleiding Medewerker beheer ICT.</p>
-          </li>
-        </ul>
+            <li>
+              <p>Netwerkbeheerder <span>niveau 4, bol en bbl</span></p>
+              <img src="." width="128" height="72">
+              <p>Iets over de opleiding Netwerkbeheerder.</p>
+            </li>
 
-        <ul>
-          <li>
-            <p>Telecommonteur</p>
-            <p>niveau 3, bbl</p>
-            <p>Iets over de opleiding Telecommonteur.</p>
-          </li>
-        </ul>
+            <li>
+              <p>Medewerker beheer ICT <span>niveau 3, bol en bbl</span></p>
+              <img src="." width="128" height="72">
+              <p>Iets over de opleiding Medewerker beheer ICT.</p>
+            </li>
 
-        <ul>
-          <li>
-            <p>Medewerker ICT</p>
-            <p>niveau 2, bol</p>
-            <p>Iets over de opleiding Medewerker ICT.</p>
-          </li>
-        </ul>
+            <li>
+              <p>Telecommonteur <span>niveau 3, bbl</span></p>
+              <img src="." width="128" height="72">
+              <p>Iets over de opleiding Telecommonteur.</p>
+            </li>
+
+            <li>
+              <p>Medewerker ICT <span>niveau 2, bol</span></p>
+              <img src="." width="128" height="72">
+              <p>Iets over de opleiding Medewerker ICT.</p>
+            </li>
+          </ul>
+        </nav>
 
         <h2>Locaties</h2>
 

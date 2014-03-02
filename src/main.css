@@ -65,3 +65,43 @@ footer {
   font-size: 10pt;
   text-align: center;
 }
+
+/* Tables of contents */
+
+nav.toc ul {
+  display: table;
+  list-style-type: none;
+  margin: 1em 0;
+  padding: 0;
+}
+
+nav.toc img {
+  position: absolute;
+  top: 0;
+
+  border: 1px solid #999;
+  height: 72px;
+  width: 128px;
+}
+
+nav.toc ul p {
+  font-size: 10pt;
+  margin: 0 0 0 150px;
+}
+
+nav.toc ul p:first-of-type {
+  font-size: 14pt;
+}
+
+nav.toc p span {
+  display: block;
+  font-size: 10pt;
+  font-style: italic;
+  margin-bottom: .5em;
+}
+
+nav.toc li {
+  position: relative;
+  min-height: 72px;
+  margin-bottom: 1em;
+}
