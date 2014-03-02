@@ -84,12 +84,33 @@ article header {
 
 footer {
   background: linear-gradient(#047, #025);
+  font-size: 10pt;
   text-align: center;
 }
 
 article header a,
 footer a {
   color: white;
+}
+
+/*
+  Keep the footer at the bottom of the page or, if the page doesn't fill the height of the window, at the bottom of the window.
+*/
+
+html {
+  position: relative;   /* make html the containing block of footer */
+  min-height: 100%;     /* give html at least the height of the window */
+}
+
+footer {
+  position: absolute;
+  bottom: 0;  /* position the footer at the bottom of the page (or window) */
+  left: 0;    
+  right: 0;   /* setting left and right to 0 is similar to setting width to 100%, but without having to worry about padding */
+}
+
+article {
+  margin-bottom: 4em;  /* prevent footer from overlapping the page content */
 }
 
 /*
