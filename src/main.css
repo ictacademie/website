@@ -45,6 +45,14 @@ h2 {
   Set common hyperlink styles.
 */
 
+a {
+  color: #069;
+}
+
+a:visited {
+  color: #669;
+}
+
 a:hover {
   color: #6c6;
   text-decoration: underline;
@@ -117,6 +125,9 @@ nav.toc img {
 
   width: 128px;
   height: 72px;
+
+  border: 1px solid #ddd;
+  box-shadow: 1px 1px 1px #ccc;
 }
 
 nav.toc li p {
@@ -125,7 +136,7 @@ nav.toc li p {
 }
 
 nav.toc li p:first-of-type {
-  font-size: 14pt;
+  font-size: 12pt;
 }
 
 nav.toc p span {
