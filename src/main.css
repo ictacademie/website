@@ -1,4 +1,30 @@
-/* Typography */
+/*
+  Center the contents of the page.
+
+  The header and the footer span the entire width of the page (because their backgrounds need to be full-width), but their contents are centered.
+*/
+
+article div,
+article header > *,
+footer > * {
+  margin: 0 auto;
+  width: 900px;
+}
+
+/*
+  Set common typography.
+
+  The preferred font is Open Sans, which is a Google Web Font, so it should be available everywhere. If it isn't, Verdana is the backup font, but only for body text, because it doesn't look good in headers.
+
+  The assumption with regards to headings is that all headings are part of an article-element and that h1 is always inside a header-element.
+*/
+
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  font-family: Open Sans, Verdana, sans-serif;
+  font-size: 12pt;
+}
 
 h1,
 h2 {
@@ -15,58 +41,109 @@ h2 {
   color: #036;
 }
 
-body {
-  font-family: Open Sans, Verdana, sans-serif;
-}
-
-a {
-  text-decoration: none;
-}
+/*
+  Set common hyperlink styles.
+*/
 
 a:hover {
-  color: #6c6;;
+  color: #6c6;
+  text-decoration: underline;
+
   position: relative;
   top: 1px;
   left: 1px;
-  text-decoration: underline;
 }
 
-header a,
+/*
+  Set the style for the header and the footer.
+*/
+
+body {
+  margin: 0;  /* make sure the header and footer touch the edges of the page */
+}
+
+article header,
+footer {
+  background-color: #036; /* in case the gradients dont' work */
+  color: white;
+  padding: 1em;
+}
+
+article header {
+  background: linear-gradient(#025, #047);
+}
+
+footer {
+  background: linear-gradient(#047, #025);
+  text-align: center;
+}
+
+article header a,
 footer a {
   color: white;
 }
 
-/* Structure */
-body {
-  margin: 0;
-}
+/*
+  Set the style for the table of contents.
 
-article > div,
-article > header > *,
-footer > * {
-  margin: 0 auto;
-  width: 900px;
-}
+  The table of contents lists topics for a part of the web site and is always inside a nav-element. The pages linked to are enumerated in an unordered list.
 
-article header {
-  padding: 1em;
-  
-  background-color: #036;
-  background: linear-gradient(#025, #047);
-  color: white;
-}
+  The first paragraph of a list item is considered to be the title of the page linked to, but it isn't in a heading-element because it shouldn't show up in the outline of a page.
 
-footer {
-  padding: 1em;
-  
-  background-color: #036;
-  background: linear-gradient(#047, #025);
-  color: white;
+  The first paragraph can have extra information inside a span-element. This information is rendered as a separate paragraph. It's on the same line in the markup, though, because if applying the style sheet fails, it is clearer to have the information on the same line.
+
+  All paragraphs after the first are shown in a smaller font than regular body text, since they are considered to be fluff text for the page link.
+
+  The image inside a list item is positioned at the top of the list item, regardless of its position in markup. It also has a fixed size.
+*/
+
+nav.toc ul {
+  list-style-type: none;
+  padding-left: 0;
+
   font-size: 10pt;
-  text-align: center;
 }
 
-/* Tables of contents */
+nav.toc li {
+  position: relative;   /* make li the container of img */
+
+  min-height: 72px;     /* make sure the images don't overlap */
+  margin-bottom: 1em;
+}
+
+nav.toc img {
+  position: absolute;   /* position the image at the top of the list item */
+  top: 0;
+
+  width: 128px;
+  height: 72px;
+}
+
+nav.toc li p {
+  margin: 0;
+  margin-left: 150px;   /* position text to the right of the image */
+}
+
+nav.toc li p:first-of-type {
+  font-size: 14pt;
+}
+
+nav.toc p span {
+  display: block;
+  font-style: italic;
+  font-size: 10pt;
+  margin-bottom: .5em;
+}
+
+nav.toc a {
+  text-decoration: none
+}
+
+/*
+  Split the table of contents into two columns.
+
+  This only works on modern browsers. In browsers that don't support columns, the table of contents will show up as a single vertical list, which is fine.
+*/
 
 nav.toc {
   column-count: 2;
@@ -75,39 +152,5 @@ nav.toc {
 }
 
 nav.toc ul {
-  display: table;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav.toc img {
-  position: absolute;
-  top: 0;
-
-  border: 1px solid #999;
-  height: 72px;
-  width: 128px;
-}
-
-nav.toc ul p {
-  font-size: 10pt;
-  margin: 0 0 0 150px;
-}
-
-nav.toc ul p:first-of-type {
-  font-size: 14pt;
-}
-
-nav.toc p span {
-  display: block;
-  font-size: 10pt;
-  font-style: italic;
-  margin-bottom: .5em;
-}
-
-nav.toc li {
-  position: relative;
-  min-height: 72px;
-  margin-bottom: 1em;
+  margin-top: 0;  /* otherwise the columns have a different top margin */
 }
