@@ -1,5 +1,10 @@
 <!doctype html>
 <html>
+  <head>
+    <title>ICT Academie</title>
+    <link href="main.css" rel="stylesheet">
+  </head>
+
   <body>
     <article>
       <header>
@@ -74,7 +79,7 @@
     </article>
 
     <footer>
-      <p>De ICT Academie is onderdeel van het <a href="http://www.davinci.nl/">Da Vinci College.</a><p>
+      <p>De ICT Academie is onderdeel van het <a href="http://www.davinci.nl/">Da Vinci College</a>.<p>
     </footer>
   </body>
 </html>

@@ -1,0 +1,67 @@
+/* Typography */
+
+h1,
+h2 {
+  font-family: Open Sans, sans-serif;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 48pt;
+}
+
+h2 {
+  font-size: 18pt;
+  color: #036;
+}
+
+body {
+  font-family: Open Sans, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #6c6;;
+  position: relative;
+  top: 1px;
+  left: 1px;
+  text-decoration: underline;
+}
+
+header a,
+footer a {
+  color: white;
+}
+
+/* Structure */
+body {
+  margin: 0;
+}
+
+article > div,
+article > header > *,
+footer > * {
+  margin: 0 auto;
+  width: 900px;
+}
+
+article header {
+  padding: 1em;
+  
+  background-color: #036;
+  background: linear-gradient(#025, #047);
+  color: white;
+}
+
+footer {
+  padding: 1em;
+  
+  background-color: #036;
+  background: linear-gradient(#047, #025);
+  color: white;
+  font-size: 10pt;
+  text-align: center;
+}
