@@ -1,4 +1,4 @@
-<?php include '/common/header.php' ?>
+<?php $_SERVER['DOCUMENT_ROOT'] . include '/common/header.php' ?>
 
 <article>
   <header>
@@ -120,4 +120,4 @@
   </div>
 </article>
 
-<?php include '/common/footer.php' ?>
+<?php $_SERVER['DOCUMENT_ROOT'] . include '/common/footer.php' ?>
