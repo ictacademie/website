@@ -14,8 +14,6 @@
           <img src="commit.png">
           <p>Sla je code op in Git.</p>
         </li>
-
-        <li></li>
       </ul>
     </nav>
   </div>

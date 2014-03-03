@@ -70,9 +70,6 @@
           <p>Sloop computers en verdien er geld mee. Refurbizz is zo rad.</p>
           <img src="refurbizz.jpg">
         </li>
-
-        <!-- This list item only exists to make the columns equal height. -->
-        <li></li>
       </ul>
     </nav>
 

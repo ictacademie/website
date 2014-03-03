@@ -39,6 +39,7 @@ h1 {
 h2 {
   font-size: 18pt;
   color: #036;
+  margin-bottom: 0;
 }
 
 /*
@@ -175,20 +176,15 @@ nav.toc a {
 
 /*
   Split the table of contents into two columns.
-
-  This only works on modern browsers. In browsers that don't support columns, the table of contents will show up as a single vertical list, which is fine.
 */
 
-nav.toc {
-  column-count: 2;
-  -webkit-column-count: 2;
-  -moz-column-count: 2;
+nav.toc li {
+  float: left;
+  width: 450px;
 }
 
-nav.toc ul {
-  margin-top: 0;  /* otherwise the columns have a different top margin */
-}
-
-nav.toc ul li p:first-of-type {
-  padding-top: 2px;   /* prevents the hyperlink hover-effect from pushing down the column a pixel when hovering over the top title in the right column of a table of contents */
+nav.toc ul:after {  /* insert a dummy element after each list */
+  content: ' ';     /* give the element content so the browser renders it */
+  display: block;
+  clear: both;      /* make sure content that follows is displayed below the columns */
 }
