@@ -3,6 +3,7 @@
 <!doctype html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>ICT Academie</title>
     <link href="/common/main.css" rel="stylesheet">
   </head>
