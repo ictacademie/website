@@ -18,9 +18,7 @@
               $url = substr($path . '/', strlen($_SERVER['DOCUMENT_ROOT']));
           ?>
             <li>
-              <a href="<?php echo $url ?>">
-                <?php echo $title ?>
-              </a>
+              <a href="<?php echo $url ?>"><?php echo $title ?></a>
             </li>
           <?php
             }

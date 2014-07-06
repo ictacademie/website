@@ -1,12 +1,13 @@
 /*
   Center the contents of the page.
 
-  The header and the footer span the entire width of the page (because their backgrounds need to be full-width), but their contents are centered.
+  The breadcrumb bar, the header and the footer span the entire width of the page (because their backgrounds need to be full-width), but their contents are centered.
 */
 
-article div,
-article header > *,
-footer > * {
+body > header > *,      /* breadcrumb bar */
+article div,            /* article content */
+article header > *,     /* article header */
+footer > * {            /* footer */
   margin: 0 auto;
   width: 900px;
 }
@@ -94,6 +95,51 @@ footer {
 article header a,
 footer a {
   color: white;
+}
+
+/*
+  Set the style for the breadcrumb bar.
+
+  The breadcrumb bar is part of the header. The breadcrumb bar is wrapped in a nav-element. The breadcrumb bar itself is an ordered list and each element in the list contains a hyperlink.
+*/
+
+body > header {               /* the header spans the entire width */
+  background-color: #025;
+  color: #888;
+}
+
+nav.breadcrumb {
+  padding-left: 12px;
+  padding-top: 5px;
+  font-size: 10pt;
+}
+
+nav.breadcrumb ol {
+  margin: 0;
+  padding: 0;
+}
+
+nav.breadcrumb ol li {
+  display: inline-block;      /* make the list horizontal */
+  margin-right: .35em;
+}
+
+nav.breadcrumb ol li:after {  
+  content: '>';               /* separator between breadcrumbs */
+  margin-left: .35em;
+}
+
+nav.breadcrumb ol li:last-child:after {   
+  display: none;              /* suppress separator after last breadcrumb */
+}
+
+nav.breadcrumb a {
+  color: #bbb;
+  text-decoration: none;
+}
+
+nav.breadcrumb a:hover {
+  color: #6c6;
 }
 
 /*
